@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pet Vision</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🐾 Pet Vision</h1>
+        <p>Real-time dog/cat computer vision</p>
+    </header>
+
+    <main>
+
+        <section class="video-panel">
+
+            <div class="video-header">
+                <span>LIVE CAMERA</span>
+                <span id="camera-status">OFFLINE</span>
+            </div>
+
+            <div class="video-container">
+                <img
+                    id="video"
+                    src="/video"
+                    alt="Camera stream"
+                >
+            </div>
+
+        </section>
+
+        <section class="dashboard">
+
+            <div class="card">
+
+                <h2>Detection</h2>
+
+                <div class="value" id="animal">
+                    NONE
+                </div>
+
+                <div>
+                    Confidence:
+                    <span id="confidence">0%</span>
+                </div>
+
+                <div class="progress-container">
+                    <div
+                        id="progress"
+                        class="progress"
+                    ></div>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h2>System State</h2>
+
+                <div
+                    class="state"
+                    id="state"
+                >
+                    IDLE
+                </div>
+
+                <div>
+                    Cooldown:
+                    <span id="cooldown">0.0</span>s
+                </div>
+
+                <div>
+                    FPS:
+                    <span id="fps">0.0</span>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Statistics</h2>
+
+                <div>Frames:
+                    <span id="frames">0</span>
+                </div>
+
+                <div>Dog detections:
+                    <span id="dogs">0</span>
+                </div>
+
+                <div>Cat detections:
+                    <span id="cats">0</span>
+                </div>
+
+                <div>Triggers:
+                    <span id="triggers">0</span>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Controls</h2>
+
+                <button
+                    onclick="startDetection()"
+                    class="button green"
+                >
+                    Start Detection
+                </button>
+
+                <button
+                    onclick="stopDetection()"
+                    class="button red"
+                >
+                    Stop Detection
+                </button>
+
+                <button
+                    onclick="resetStatistics()"
+                    class="button"
+                >
+                    Reset Statistics
+                </button>
+
+                <button
+                    onclick="testTrigger()"
+                    class="button orange"
+                >
+                    Test Virtual Trigger
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Last Virtual Trigger</h2>
+
+                <div id="last-trigger">
+                    None
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Pet Vision runs locally. No physical actuator control is implemented.
+    </footer>
+
+</div>
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>

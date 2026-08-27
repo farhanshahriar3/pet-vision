@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    background: #0d1117;
+    color: #e6edf3;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 24px;
+}
+
+header {
+    margin-bottom: 24px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #8b949e;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.video-panel,
+.card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+}
+
+.video-panel {
+    overflow: hidden;
+}
+
+.video-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: #21262d;
+    font-weight: bold;
+}
+
+.video-container {
+    background: black;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    padding: 18px;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.value {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.state {
+    font-size: 26px;
+    font-weight: bold;
+    color: #58a6ff;
+    margin-bottom: 10px;
+}
+
+.progress-container {
+    height: 12px;
+    background: #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: #3fb950;
+    transition: width 0.1s linear;
+}
+
+.button {
+    width: 100%;
+    padding: 11px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 7px;
+    background: #30363d;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+.green {
+    background: #238636;
+}
+
+.red {
+    background: #da3633;
+}
+
+.orange {
+    background: #9e6a03;
+}
+
+footer {
+    margin-top: 25px;
+    color: #8b949e;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+}

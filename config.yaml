@@ -1,0 +1,40 @@
+camera:
+  index: 0
+  width: 1280
+  height: 720
+  fps: 30
+
+model:
+  name: "yolo11n.pt"
+  device: "auto"
+  inference_size: 640
+
+detection:
+  confidence_threshold: 0.60
+  target_classes:
+    - dog
+    - cat
+
+trigger:
+  confirmation_time: 0.75
+  cooldown: 5.0
+
+server:
+  host: "127.0.0.1"
+  port: 8000
+
+serial:
+  enabled: false
+  simulation_only: true
+  port: ""
+  baudrate: 115200
+
+logging:
+  level: "INFO"
+  file: "logs/pet_vision.log"
+
+display:
+  show_boxes: true
+  show_confidence: true
+  show_fps: true
+  show_state: true
