@@ -117,8 +117,21 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 Then activate again:
 .venv\Scripts\Activate.ps1
 
-
 Install dependencies
 pip install -r requirements.txt
+
+
+
+**📊 Metrics**
+The application can track:
+
+Frames processed
+FPS
+Total detections
+Dog detections
+Cat detections
+Virtual trigger count
+Last trigger event
+
 
 
