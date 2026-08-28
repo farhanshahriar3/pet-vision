@@ -57,4 +57,68 @@ Confirmation
 Cooldown
     |
     v
-Virtual Trigger Event
+Virtual Trigger Event 
+
+📁 Project Structure
+
+pet_vision/
+│
+├── app/
+│   ├── __init__.py
+│   ├── camera.py
+│   ├── config.py
+│   ├── detector.py
+│   ├── logger.py
+│   ├── metrics.py
+│   ├── state.py
+│   ├── trigger.py
+│   └── video_source.py
+│
+├── web/
+│   ├── __init__.py
+│   ├── server.py
+│   ├── templates/
+│   │   └── index.html
+│   └── static/
+│       ├── app.js
+│       └── style.css
+│
+├── tests/
+│   ├── test_config.py
+│   ├── test_detector.py
+│   ├── test_state.py
+│   └── test_trigger.py
+│
+├── models/
+├── logs/
+│
+├── run.py
+├── config.yaml
+├── requirements.txt
+├── README.md
+└── .gitignore 
+
+🚀 Installation
+1. Clone the repository
+-- git clone https://github.com/farhanshahriar3/pet-vision.git
+Enter the project directory:
+cd pet-vision
+
+Create a virtual environment
+python -m venv .venv
+
+Activate the virtual environment
+.venv\Scripts\Activate.ps1
+If PowerShell reports:
+---running scripts is disabled on this system
+run: 
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+Then activate again:
+.venv\Scripts\Activate.ps1
+
+
+Install dependencies
+pip install -r requirements.txt
+
+
